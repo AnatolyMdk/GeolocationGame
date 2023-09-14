@@ -496,8 +496,8 @@ GameObject:
   - component: {fileID: 3471643304249230964}
   - component: {fileID: 3471643305006496075}
   - component: {fileID: 3471643305006496069}
-  - component: {fileID: -479504943874845492}
   - component: {fileID: -332229232147289181}
+  - component: {fileID: -7929406683660684518}
   m_Layer: 0
   m_Name: TreasureChestPrefab
   m_TagString: Untagged
@@ -571,23 +571,6 @@ MonoBehaviour:
   bouncingBox: 1
   closeOnExit: 1
   boxContents: []
---- !u!114 &-479504943874845492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3471643304241853864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a6ae4fa6cfd2b546911a321614e0850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRate: 0.1
-  catchRate: 0.1
-  attack: 0
-  defense: 0
-  hp: 10
 --- !u!114 &-332229232147289181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +586,19 @@ MonoBehaviour:
   rotateSpeed: 50
   floatAmplitude: 0
   floatFrequency: 0.5
+--- !u!114 &-7929406683660684518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471643304241853864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7fa5486f567f248b08bde31260a5eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonus: 1
 --- !u!1 &3798021681981134488
 GameObject:
   m_ObjectHideFlags: 0

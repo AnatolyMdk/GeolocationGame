@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int xp = 0;
     [SerializeField] private int requiredXp = 100;
     [SerializeField] private int levelBase = 100;
+    [SerializeField] private int chestsCatched = 0;
     [SerializeField] private List<GameObject> robots = new List<GameObject>();
 
     private int lvl = 1;
@@ -39,6 +40,11 @@ public class Player : MonoBehaviour
         get { return lvl; }
     }
 
+    public int ChestsCatched
+    {
+        get { return chestsCatched; }
+    }
+
     private void Start()
     {
         path = Application.persistentDataPath + "/player.dat";
@@ -57,6 +63,11 @@ public class Player : MonoBehaviour
         if (robot)
             robots.Add(robot);
         Save();
+    }
+
+    public void AddChest(int n)
+    {
+        this.chestsCatched += n;
     }
 
     public void InitLevelData()
@@ -87,6 +98,7 @@ public class Player : MonoBehaviour
             requiredXp = data.RequiredXp;
             levelBase = data.LevelBase;
             lvl = data.Lvl;
+            chestsCatched = data.ChestsCatched;
 
             // Import player robots
         } else

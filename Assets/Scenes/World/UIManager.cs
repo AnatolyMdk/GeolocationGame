@@ -8,12 +8,14 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private Text xpText;
     [SerializeField] private Text levelText;
+    [SerializeField] private Text chestText;
     [SerializeField] private GameObject menu;
 
     private void Awake()
     {
         Assert.IsNotNull(xpText);
         Assert.IsNotNull(levelText);
+        Assert.IsNotNull(chestText);
         Assert.IsNotNull(menu);
     }
 
@@ -27,6 +29,10 @@ public class UIManager : MonoBehaviour
         xpText.text = GameManager.Instance.CurrentPlayer.Xp + " / " + GameManager.Instance.CurrentPlayer.RequiredXp;
     }
 
+    public void UpdateChest()
+    {
+        chestText.text = GameManager.Instance.CurrentPlayer.ChestsCatched.ToString();
+    }
 
     public void ToggleMenu()
     {
@@ -47,5 +53,6 @@ public class UIManager : MonoBehaviour
     {
         UpdateLevel();
         UpdateXP();
+        UpdateChest();
     }
 }
